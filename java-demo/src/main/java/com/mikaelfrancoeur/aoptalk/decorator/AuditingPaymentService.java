@@ -3,7 +3,7 @@ package com.mikaelfrancoeur.aoptalk.decorator;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-class AuditingPaymentService implements PaymentService{
+class AuditingPaymentService implements PaymentService {
 
     private final PaymentService delegate;
 
