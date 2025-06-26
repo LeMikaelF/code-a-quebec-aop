@@ -26,7 +26,7 @@ class AuditAspect {
     private final AuditService auditService;
 
     @AfterReturning("@annotation(auditedAnnotation)") // AspectJ language
-    public void beforeAudited(JoinPoint joinPoint, Audited auditedAnnotation) {
+    public void afterSuccess(JoinPoint joinPoint, Audited auditedAnnotation) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 
         Expression expression = parser.parseExpression(auditedAnnotation.expression()); // cache this for better performance
