@@ -2,7 +2,7 @@ export function audited<
     TThis,                        // the class instance (this)
     TArgs extends any[],          // method parameter tuple
     TResult,                      // method return type
-    TExpr        // expression's return type
+    TExpr                         // expression's return type
 >(action: 'save' | 'delete', expression: (...args: TArgs) => TExpr) {
     // this is the function invoked by adding parentheses to the annotation!
 
